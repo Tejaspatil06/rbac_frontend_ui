@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #141E30, #243B55);
+  color: #ffffff;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+
+.sidebar {
+  width: 260px;
+  background: #0B051D;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-right: 10px #4A5FBD;
+}
+
+.sidebar-title {
+  font-style: italic; 
+  font-family: 'Brush Script', cursive; 
+  background: linear-gradient(90deg, #6a11cb, #2575fc); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem; 
+}
+.sidebar-title h1{
+  font-style: italic; 
+  font-family: 'Brush Script', cursive; 
+  background: linear-gradient(90deg, #6a11cb, #2575fc); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem; 
+}
+
+.nav-menu a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #cfcfcf;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border-radius: 4px;
+  display: block;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  background: linear-gradient(90deg, #6a11cb, #2575fc); 
+  color: #ffffff;
+  font-weight: 500;
+}
+
+
+.content {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #0B051D;
+  border-left: solid 1px #4A5FBD;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #6a11cb, #2575fc); 
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: #4A5FBD
+}
+
+button.delete-btn {
+  background: #4A5FBD
+}
+
+button.delete-btn:hover {
+  background: #4A5FBD
+}
+
+
+.modal {
+  background: rgba(20, 20, 30, 0.95);
+  padding: 20px;
+  border-radius: 4px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.modal h2 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.modal label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.modal input,
+.modal select {
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background: #1F1F2E;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.modal input:focus,
+.modal select:focus {
+  outline: none;
+  box-shadow: 0 0 10px #4A5FBD;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  color: #fff;
+  background-color: #0B051D;
+  border-color: #4A5FBD;
+}
+
+table thead {
+  background: #4A5FBD;
+}
+
+table tbody tr:nth-child(odd) {
+  background: #4A5FBD;
+}
+
+table tbody tr:hover {
+  background: #4A5FBD;
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .nav-menu a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .modal {
+    width: 95%;
+  }
+}
